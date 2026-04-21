@@ -20,11 +20,6 @@ class FindSimilarOpinions:
         return self.word2VecObject.similarity(word_1, word_2)
 
     def findSimilarOpinions(self, query_opinion):
-        # example data, which you will need to remove in your real code. Only for demo.
-        # example_similarity = self.get_word_sim("great", "good")
-        # print("Similarity of 'great' and 'good' is " + str(example_similarity))
-        # similar_opinions = {'service, good': [1, 2, 3], 'service, excellent': [11, 12]}
-        # return similar_opinions
         # 1. Split the query into attribute and assessment
         q_attr, q_assess = [x.strip() for x in query_opinion.split(",")]
         similar_opinions = {}
